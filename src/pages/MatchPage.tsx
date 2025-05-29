@@ -127,11 +127,11 @@ const HomePage = () => {
         )}
       </div>
 
-      <p className="text-gray-300 text-sm mt-4 font-blue">
+      <p className="text-red-400 text-sm mt-4 font-blue">
 
         Some leagues may not have ongoing matches right now, so no results will appear for them.
       </p>
-      <p className=" text-gray-300 text-sm mb-2">
+      <p className=" text-red-400 text-sm mb-2">
 
         You can try leagues like Premier League, Segunda División, Primera A, Allsvenskan, etc. for checking.
       </p>
