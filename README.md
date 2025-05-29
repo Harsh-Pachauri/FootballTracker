@@ -105,7 +105,7 @@ This project uses a free external API. Make sure you adhere to [AllSportsAPI’s
 
 ## 💡 Author
 
-Made with ❤️ by [Harsh Pachauri](https://github.com/Harsh-Pachauri)
+Made by [Harsh Pachauri](https://github.com/Harsh-Pachauri)
 
 ---
 
