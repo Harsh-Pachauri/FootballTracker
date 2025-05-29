@@ -64,12 +64,12 @@ const HomePage = () => {
       try {
         const data = await getCompetitions();
         setLeagues(data);
-              if (data.length > 0) {
-        // Find league with league_key '22' or fallback to first league if not found
-    const  defaultLeague = data.find((league: League) => league.league_key === "22") || data[122];
-    console.log(defaultLeague)
-        setSelectedLeague(defaultLeague);
-      }
+        if (data.length > 0) {
+          // Find league with league_key '22' or fallback to first league if not found
+          const defaultLeague = data.find((league: League) => league.league_key === "22") || data[122];
+          console.log(defaultLeague)
+          setSelectedLeague(defaultLeague);
+        }
 
       } catch (error) {
         console.error('Error fetching leagues:', error);
@@ -84,7 +84,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (selectedLeague) {
-      console.log('selected',selectedLeague)
+      console.log('selected', selectedLeague)
       const fetchMatches = async () => {
         setIsLoadingMatches(true);
         try {
@@ -115,6 +115,7 @@ const HomePage = () => {
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 md:mb-0">
           Upcoming Soccer Matches
         </h1>
+
         {isLoadingLeagues ? (
           <div className="w-48 h-10 bg-gray-200 dark:bg-gray-700 animate-pulse rounded-md"></div>
         ) : (
@@ -122,10 +123,18 @@ const HomePage = () => {
             leagues={leagues}
             selectedLeague={selectedLeague}
             onSelectLeague={handleSelectLeague}
-          />
+            />
         )}
       </div>
 
+<p className="text-gray-300 text-sm mt-4 font-blue">
+
+              Some leagues may not have ongoing matches right now, so no results will appear for them.
+            </p>
+            <p className=" text-gray-300 text-sm mb-2">
+
+              You can try leagues like Premier League, Segunda División, Primera A, Allsvenskan, etc. for checking.
+            </p>
       <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-6">
         <MatchesList matches={matches} isLoading={isLoadingMatches} />
       </div>

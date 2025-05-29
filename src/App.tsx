@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navbar from './components/common/Navbar';
 import LandingPage from './pages/LandingPage';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/MatchPage';
 import TeamDetailsPage from './pages/TeamDetailsPage';
 import PlayerProfilePage from './pages/PlayerProfilePage';
 import { ThemeProvider } from './context/ThemeContext';
